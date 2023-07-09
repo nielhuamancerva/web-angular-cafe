@@ -1,0 +1,121 @@
+.header {
+  padding: auto;
+  margin: auto;
+}
+.main{
+  height: 82vh;
+  background:  #dfb993;
+}
+
+.main .main-div {
+  display:flex;
+}
+
+.header .header-div{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background:  #ffffff;
+  padding: 0;
+  margin: 0;
+}
+ 
+.header .header-div .header-div-logo  {
+  color: rgb(0, 0, 0);
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0.2em;
+}
+
+.header .header-div .header-div-logo .logo {
+  height: 3.9em;
+  width: 9.5em;
+}
+
+.header .header-div .header-div-icon, #nav-check{
+  display: none;
+}
+
+
+.header .header-div .header-div-menu .header-div-link {
+  display:flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header .header-div .header-div-menu .header-div-link .header-div-link-a {
+  box-sizing: content-box;
+  text-decoration:none;
+  padding: 1em 0.5em;
+  color: rgb(0, 0, 0);
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.header .header-div .header-div-link-a:hover{
+  background:   #b2dfdb;
+}
+
+.header .header-div .header-div-logo .header-div-a {
+  font-weight: bold;
+  font: 2em;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+}
+
+.footer{
+  background:  #ffffff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.footer .footer-div .footer-div-p{
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px)
+  {
+    .header .header-div{
+      position: relative;
+    }
+
+    .header .header-div .header-div-menu {
+      position: absolute;
+      overflow-y: hidden;
+      transition: all 0.3s ease-in;
+      top: 4.3em;
+      height: 0px;
+      width: 100%;
+      background: white;
+    }
+
+    .header .header-div .header-div-menu .header-div-link .header-div-link-a{
+      width: 100%;
+      text-align: center;
+      padding: 0.55em 0em;
+    }
+    .header .header-div .header-div-menu .header-div-link{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding:0;
+    }
+    .header .header-div .header-div-icon{
+      display: inline-block;
+      align-items: center;
+      cursor: pointer;
+    }
+    #nav-check:checked ~ #menus {
+      height: calc(90vh);
+      overflow-y: auto;
+    }
+
+  }
